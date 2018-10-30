@@ -50,12 +50,9 @@ class NavBar extends Component {
   }
 }
 
-const NewMenu = styled(Menu)`
-  color: black;
-`
-
 const Place = styled.div`
   display: flex;
+  justify-content: center;
 `
 
 

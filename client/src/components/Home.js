@@ -16,9 +16,11 @@ class Home extends Component {
   }
 }
 const Hero = styled.img`
-  left: 50%;
   width: 20%;
   height: 20%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 `
 const Body = styled.div`
  background-color: black;
