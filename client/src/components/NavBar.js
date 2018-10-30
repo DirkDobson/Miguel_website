@@ -3,46 +3,62 @@ import { Menu } from 'semantic-ui-react';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { handleLogout } from '../reducers/user';
+import styled from 'styled-components'
 
 class NavBar extends Component {
   rightNavs = () => {
-    const { user, dispatch, history } = this.props;
-
-    if (user.id) {
-      return (
-        <Menu.Menu position='right'>
-          <Menu.Item
-            name='Logout'
-            onClick={() => dispatch(handleLogout(history))}
-          />
-        </Menu.Menu>
-      );
-    }
-    return (
-      <Menu.Menu position="right">
-        <Link to="/register">
-          <Menu.Item name="Register" />
-        </Link>
-        <Link to="/login">
-          <Menu.Item name="Login" />
-        </Link>
-      </Menu.Menu>
-    );
+    const { user, dispatch, history } = this.props
   }
+
+  //   if (user.id) {
+  //     return (
+  //       <FMenu.FMenu position='right'>
+  //         <FMenu.Item
+  //           name='Logout'
+  //           onClick={() => dispatch(handleLogout(history))}
+  //         />
+  //       </FMenu.FMenu>
+  //     );
+  //   }
+  //   return (
+  //     <FMenu.FMenu position="right">
+  //       <Link to="/register">
+  //         <FMenu.Item name="Register" />
+  //       </Link>
+  //       <Link to="/login">
+  //         <FMenu.Item name="Login" />
+  //       </Link>
+  //     </FMenu.FMenu>
+  //   );
+  // }
 
   render() {
     return (
-      <div>
-        <Menu pointing secondary>
-          <Link to="/">
-            <Menu.Item name="home" />
-          </Link>
-          { this.rightNavs() }
+      <Place>
+        <Menu secondary inverted >
+          <Menu.Item name='Home' />
+          <Menu.Item name='Studio Work' />
+          <Menu.Item name='Photos' />
+          <Menu.Item name='Videos' />
+          <Menu.Item name='Music' />
+          <Menu.Item name='Demos' />
+          <Menu.Item name='Downloads' />
+          <Menu.Item name='Contact' />
         </Menu>
-      </div>
+      </Place>
     );
   }
 }
+
+const NewMenu = styled(Menu)`
+  color: black;
+`
+
+const Place = styled.div`
+  display: flex;
+`
+
+
 
 const mapStateToProps = state => {
   return { user: state.user };
