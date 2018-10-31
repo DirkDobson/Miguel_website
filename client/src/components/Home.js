@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 // import { Header } from 'semantic-ui-react'
 import Miguel_photo0 from '../Images/Miguel_photo0.jpg'
+import LimeRush from '../Images/LimeRush.mp4'
 import styled from 'styled-components'
 import NavBar from './NavBar'
 
@@ -18,6 +19,9 @@ class Home extends Component {
          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </Description>
+        <video width="400" controls>
+          <source src={LimeRush} type="video/mp4" />
+        </video>
       </div>
       </Body>
     );
