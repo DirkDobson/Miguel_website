@@ -36,6 +36,11 @@ const Body = styled.div`
 
 const Description = styled.section`
   color: white;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+  text-align: center;
 `
 export default Home
 
