@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 // import { Header } from 'semantic-ui-react'
 import Miguel_photo0 from '../Images/Miguel_photo0.jpg'
+import Facebook_logo from '../Images/Facebook_logo.png'
+import Youtube_logo from '../Images/Youtube_logo.jpeg'
 import LimeRush from '../Images/LimeRush.mp4'
 import styled from 'styled-components'
 import NavBar from './NavBar'
@@ -34,6 +36,10 @@ class Home extends Component {
         <Miguel width="400" controls>
           <source src={LimeRush} type="video/mp4" />
         </Miguel>
+      </Divid>
+      <Divid>
+      <Logos src={Facebook_logo} alt="facebook logo" />
+      <Logos src={Youtube_logo} alt="Youtube logo" />
       </Divid>
       </Body>
     );
@@ -76,6 +82,10 @@ display: flex;
 justify-content: center;
 font-size: 1.2em;
 margin-top 10px;
+`
+const Logos = styled.img`
+  width: 24px;
+  height: 24px;
 `
 export default Home
 
