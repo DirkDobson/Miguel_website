@@ -12,7 +12,7 @@ class Home extends Component {
       {/* <Header as="h1" textAlign="center">Home Component</Header> */}
       <Hero src={Miguel_photo0} alt="Migule playing Guitar" />
       <NavBar />
-      <Par>Things That Miguel Does</Par>
+      <Par>Welcome to Meguel's Website</Par>
       <Divid>
         <Description>
          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -75,6 +75,7 @@ color: white;
 display: flex;
 justify-content: center;
 font-size: 1.2em;
+margin-top 10px;
 `
 export default Home
 
