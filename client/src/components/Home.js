@@ -33,7 +33,8 @@ class Home extends Component {
            qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum 
            fugiat quo voluptas nulla pariatur?
         </Description>
-        <Miguel width="400" controls>
+        <Miguel controls>
+        Limelight
           <source src={LimeRush} type="video/mp4" />
         </Miguel>
       </Divid>
@@ -70,18 +71,20 @@ const Divid = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
 `
 
 const Miguel = styled.video`
- margin-right: 300px;
+ margin-right: 122px;
 `
 
 const Par = styled.p`
-color: white;
-display: flex;
-justify-content: center;
-font-size: 1.2em;
-margin-top 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-size: 1.2em;
+  margin-top 10px;
 `
 const Logos = styled.img`
   width: 24px;
