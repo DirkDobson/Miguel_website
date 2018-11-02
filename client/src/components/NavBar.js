@@ -36,14 +36,30 @@ class NavBar extends Component {
     return (
       <Place>
         <Menu secondary inverted >
-          <Menu.Item name='Home' />
-          <Menu.Item name='Studio Work' />
-          <Menu.Item name='Photos' />
-          <Menu.Item name='Videos' />
-          <Menu.Item name='Music' />
-          <Menu.Item name='Demos' />
-          <Menu.Item name='Downloads' />
-          <Menu.Item name='Contact' />
+          <Link to="/home" >
+            <Menu.Item name='Home' />
+          </Link>
+          <Link to="/studio_work">
+            <Menu.Item name='Studio Work' />
+          </Link>
+          <Link to="/photos">
+            <Menu.Item name='Photos' />
+          </Link>
+          <Link to="videos">
+            <Menu.Item name='Videos' />
+          </Link>
+          <Link to="music">
+            <Menu.Item name='Music' />
+          </Link>
+          <Link to="demos">
+            <Menu.Item name='Demos' />
+          </Link>
+          <Link to="/downloads">
+            <Menu.Item name='Downloads' />
+          </Link>
+          <Link to="contact">
+            <Menu.Item name='Contact' />
+          </Link>
         </Menu>
       </Place>
     );
@@ -52,7 +68,8 @@ class NavBar extends Component {
 
 const Place = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
 `
 
 
