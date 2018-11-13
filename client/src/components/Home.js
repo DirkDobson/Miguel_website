@@ -13,7 +13,6 @@ class Home extends Component {
       <Body>
       {/* <Header as="h1" textAlign="center">Home Component</Header> */}
       <Hero src={Miguel_photo0} alt="Migule playing Guitar" />
-      <NavBar />
       <Par>Welcome to Meguel's Website</Par>
       <Divid>
         <Description>
