@@ -5,7 +5,6 @@ import Facebook_logo from '../Images/Facebook_logo.png'
 import Youtube_logo from '../Images/Youtube_logo.jpeg'
 import LimeRush from '../Images/LimeRush.mp4'
 import styled from 'styled-components'
-import NavBar from './NavBar'
 
 class Home extends Component {
   render() {
@@ -53,11 +52,10 @@ const Hero = styled.img`
   margin-right: auto;
 `
 const Body = styled.div`
- background-color: black;
+ background-color: white;
 ` 
 
 const Description = styled.section`
-  color: white;
   display: block;
   margin-left: auto;
   margin-right: 100px;
