@@ -11,15 +11,16 @@ class Home extends Component {
     return (
       <Body>
       {/* <Header as="h1" textAlign="center">Home Component</Header> */}
-      <Hero src={Miguel_photo0} alt="Migule playing Guitar" />
       <Par>Welcome to Meguel's Website</Par>
-      <Divid>
+        <Miguel controls>
+        Limelight
+          <source src={LimeRush} type="video/mp4" />
+        </Miguel>
         <Description>
          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        <br />
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
          totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
          dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
@@ -29,13 +30,8 @@ class Home extends Component {
            voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit 
            laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit 
            qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum 
-           fugiat quo voluptas nulla pariatur?
+           fugiat quo voluptas nulla pariatur? End
         </Description>
-        <Miguel controls>
-        Limelight
-          <source src={LimeRush} type="video/mp4" />
-        </Miguel>
-      </Divid>
       <Divid>
       <Logos src={Facebook_logo} alt="facebook logo" />
       <Logos src={Youtube_logo} alt="Youtube logo" />
@@ -53,15 +49,15 @@ const Hero = styled.img`
 `
 const Body = styled.div`
  background-color: white;
+ padding-top: 2em;
 ` 
 
 const Description = styled.section`
-  display: block;
-  margin-left: auto;
-  margin-right: 100px;
-  margin-top: 45px;
-  width: 500px;
+  display: flex;
+  justify-content: center;
   text-align: center;
+  font-size: 1.5em;
+  padding: 2.5em;
 `
 
 const Divid = styled.div`
@@ -73,7 +69,9 @@ const Divid = styled.div`
 `
 
 const Miguel = styled.video`
- margin-right: 122px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 `
 
 const Par = styled.p`
@@ -86,6 +84,8 @@ const Par = styled.p`
 const Logos = styled.img`
   width: 24px;
   height: 24px;
+  padding-right: 1em;
+  padding-left: 1em;
 `
 export default Home
 
