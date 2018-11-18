@@ -77,7 +77,7 @@ const Miguel = styled.video`
 `
 
 const Par = styled.p`
-  color: white;
+  color: black;
   display: flex;
   justify-content: center;
   font-size: 1.2em;
