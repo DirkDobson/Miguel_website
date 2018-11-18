@@ -47,13 +47,13 @@ const Center = styled.div`
   justify-content: center;
   flex-direction: row;
   background-color: blue;
-  Height: 35px;
+  Height: 2.5em;
 `
 const P = styled.p`
 font-size: 2em;
 color: white;
-padding-left 15px;
-padding-right 15px;
+padding-left 1em;
+padding-right 1em;
 `
 
 
