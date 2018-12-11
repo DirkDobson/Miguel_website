@@ -1,12 +1,26 @@
 import React, { Component } from 'react'
-// import { Header } from 'semantic-ui-react'
-import Miguel_photo0 from '../Images/Miguel_photo0.jpg'
+import {
+  Image
+} from 'semantic-ui-react'
+import Band_Playing from '../Images/Band_Playing.jpg';
+import Holding_Guitar from '../Images/Holding_Guitar.jpg';
+import With_Band from '../Images/With_Band.jpg';
 import Facebook_logo from '../Images/Facebook_logo.png'
 import Youtube_logo from '../Images/Youtube_logo.jpeg'
 import LimeRush from '../Images/LimeRush.mp4'
 import styled from 'styled-components'
 
 class Home extends Component {
+
+  PhotoLoop = () => {
+    return(
+      <>
+        <Image src={Band_Playing} />
+        <Image src={Holding_Guitar} />
+        <Image src={With_Band} />
+      </>
+    )
+  }
   render() {
     return (
       <Body>
@@ -40,16 +54,11 @@ class Home extends Component {
     );
   }
 }
-const Hero = styled.img`
-  width: 20%;
-  height: 20%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-`
+
 const Body = styled.div`
- background-color: white;
+ background-color: #686868;
  padding-top: 2em;
+ height: 100%;
 ` 
 
 const Description = styled.section`
