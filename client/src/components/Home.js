@@ -15,9 +15,9 @@ class Home extends Component {
   PhotoLoop = () => {
     return(
       <>
-        <Image src={Band_Playing} />
-        <Image src={Holding_Guitar} />
-        <Image src={With_Band} />
+        <Image src={Band_Playing} alt="Migule with Band"/>
+        <Image src={Holding_Guitar} alt="Migule on Stage"/>
+        <Image src={With_Band} alt="Migule on alone on Stage" />
       </>
     )
   }
