@@ -13,6 +13,14 @@ import styled from 'styled-components'
 class Home extends Component {
 
   PhotoLoop = () => {
+    let i = 1
+    i++
+    switch (i){ 
+      case 1:
+        return (<Image src={Band_Playing} alt="Migule with Band"/>)
+      case 2: 
+        return (<Image src={Holding_Guitar} alt="Migule on Stage"/>)
+    }
     return(
       <>
         <Image src={Band_Playing} alt="Migule with Band"/>
