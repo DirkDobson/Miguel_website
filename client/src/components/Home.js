@@ -15,7 +15,7 @@ class Home extends Component {
   componentDidMount() {
     this.interval = setInterval(() => {
       this.setState({i: this.state.i + 1})
-    }, 1000)
+    }, 3000)
   }
 
   componentWillUnomount(){
@@ -23,18 +23,13 @@ class Home extends Component {
   }
 
   PhotoLoop = (i) => {  
-    const {i} = this.state
-    this.i++
-    switch (this.i){ 
-      case 1:
-        return (<Image src={Band_Playing} alt="Migule with Band"/>)
-      case 2: 
-        return (<Image src={Holding_Guitar} alt="Migule on Stage"/>)
-      default: 
-        this.setState({i: 0})
-    }
-    // setInterval(this.PhotoLoop(this.i), 1000)
+    if(i % 2 === 0) {
+      return (<Image src={Band_Playing} alt="Migule with Band"/>)
+    } else {
+      return (<Image src={Holding_Guitar} alt="Migule on Stage"/>)
+    }    
   }
+
   render() {
     return (
       <Body>
@@ -60,7 +55,7 @@ class Home extends Component {
            qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum 
            fugiat quo voluptas nulla pariatur? End
         </Description>
-       {setInterval(this.PhotoLoop(this.state.i), 1000)}
+        {this.PhotoLoop(this.state.i)}
       <Divid>
         <Logos src={Facebook_logo} alt="facebook logo" />
         <Logos src={Youtube_logo} alt="Youtube logo" />     
