@@ -5,7 +5,7 @@ import With_Band from '../Images/With_Band.jpg';
 import Facebook_logo from '../Images/Facebook_logo.png'
 import Youtube_logo from '../Images/Youtube_logo.jpeg'
 import LimeRush from '../Images/LimeRush.mp4'
-import styled from 'styled-components'
+import styled, {css, keyframes} from 'styled-components'
 
 class Home extends Component {
   state = { 
@@ -24,6 +24,7 @@ class Home extends Component {
       }
     }, 3000)
   }
+  // Interval must be double of Animation length
 
   componentWillUnomount(){
     clearInterval(this.interval)
@@ -79,9 +80,27 @@ const Body = styled.div`
  height: 100%;
 ` 
 
+
+const pulse = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`
+
+const animation = props =>
+  css`
+    ${pulse} ${props.animationLength} 1.5s infinite alternate; 
+  `
+
+// Animation length must be half of set interval
+
 const Loop = styled.img`
   height: 20em;
   width: 20em;
+  animation: ${animation};
 `
 
 const Title = styled.h1`
