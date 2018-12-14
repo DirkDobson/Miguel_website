@@ -14,7 +14,7 @@ class Home extends Component {
     <Loop src={With_Band} alt="Migule with Band"/>,
     <Loop src={Band_Playing} alt="Migule with Band"/>,
     <Loop src={Holding_Guitar} alt="Migule on Stage"/>,
-  ]
+  ],
    }
   componentDidMount() {
     this.interval = setInterval(() => {
@@ -40,7 +40,7 @@ class Home extends Component {
   render() {
     return (
       <Body>
-      <Par>Miguel Guitarist</Par>
+      <Title>Miguel Guitarist</Title>
         <Miguel controls>
         Limelight
           <source src={LimeRush} type="video/mp4" />
@@ -82,6 +82,14 @@ const Body = styled.div`
 const Loop = styled.img`
   height: 20em;
   width: 20em;
+`
+
+const Title = styled.h1`
+color: black;
+display: flex;
+justify-content: center;
+font-size: 2em;
+margin-top 10px;
 `
 
 const Description = styled.section`
