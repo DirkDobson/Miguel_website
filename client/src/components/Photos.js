@@ -4,7 +4,7 @@ import Band_Playing from '../Images/Band_Playing.jpg';
 import Holding_Guitar from '../Images/Holding_Guitar.jpg';
 import With_Band from '../Images/With_Band.jpg';
 import Gear from '../Images/Gear.jpg';
-import Acostic from '../Images/Acostic.jpg';
+import Acoustic from '../Images/Acoustic.jpg';
 import Angry from '../Images/Angry.jpg';
 import Bigband from '../Images/Bigband.jpg';
 import Gear2 from '../Images/Gear2.jpg';
@@ -24,7 +24,7 @@ class Photos extends React.Component {
           <Photo src={Gear} alt="Equipment of Migule" />
         </Row>
         <Row>
-          <Photo src={Acostic} alt="Equipment of Migule" />
+          <Photo src={Acoustic} alt="Equipment of Migule" />
           <Photo src={Angry} alt="Miguel looking angry" />
           <Photo src={Bigband} alt="Miguel with Big Band" />
           <Photo src={Gear2} alt="Equipment of Migule" />

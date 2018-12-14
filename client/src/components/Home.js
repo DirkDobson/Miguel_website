@@ -1,19 +1,25 @@
 import React, { Component } from 'react'
+import styled, {css, keyframes} from 'styled-components'
+import LimeRush from '../Images/LimeRush.mp4'
 import Band_Playing from '../Images/Band_Playing.jpg';
 import Holding_Guitar from '../Images/Holding_Guitar.jpg';
 import With_Band from '../Images/With_Band.jpg';
-import Facebook_logo from '../Images/Facebook_logo.png'
-import Youtube_logo from '../Images/Youtube_logo.jpeg'
-import LimeRush from '../Images/LimeRush.mp4'
-import styled, {css, keyframes} from 'styled-components'
+import Facebook_logo from '../Images/Facebook_logo.png';
+import Youtube_logo from '../Images/Youtube_logo.jpeg';
+import Angry from '../Images/Angry.jpg';
+import Acoustic from '../Images/Acoustic.jpg';
+import Pizza from '../Images/Pizza.jpg';
 
 class Home extends Component {
   state = { 
     i: 0,
     photos: [
-    <Loop src={With_Band} alt="Migule with Band"/>,
-    <Loop src={Band_Playing} alt="Migule with Band"/>,
-    <Loop src={Holding_Guitar} alt="Migule on Stage"/>,
+      <Loop src={Holding_Guitar} alt="Migule on Stage"/>,
+      <Loop src={Angry} alt="Migule playing acoustic"/>,
+      <Loop src={With_Band} alt="Migule with Band"/>,
+      <Loop src={Band_Playing} alt="Migule with Band"/>,
+      <Loop src={Acoustic} alt="Migule with acoustic"/>,
+      <Loop src={Pizza} alt="Migule with pizza shirt"/>
   ],
    }
   componentDidMount() {
