@@ -8,23 +8,33 @@ import Acostic from '../Images/Acostic.jpg';
 import Angry from '../Images/Angry.jpg';
 import Bigband from '../Images/Bigband.jpg';
 import Gear2 from '../Images/Gear2.jpg';
+import Computer from '../Images/Computer.jpg';
+import Live_Miguel from '../Images/Live_Miguel.jpg';
+import Three from '../Images/Three.jpg';
+import Pedals from '../Images/Pedals.jpg';
 
 class Photos extends React.Component {
   render() {
     return (
       <Body>
-        <Top>
+        <Row>
           <Photo src={Band_Playing} alt="migule with band"/>
           <Photo src={Holding_Guitar} alt="migule with guitar" />
           <Photo src={With_Band} alt="on stage migule" />
           <Photo src={Gear} alt="Equipment of Migule" />
-        </Top>
-        <Middle>
+        </Row>
+        <Row>
           <Photo src={Acostic} alt="Equipment of Migule" />
-          <Photo src={Angry} alt="Equipment of Migule" />
-          <Photo src={Bigband} alt="Equipment of Migule" />
+          <Photo src={Angry} alt="Miguel looking angry" />
+          <Photo src={Bigband} alt="Miguel with Big Band" />
           <Photo src={Gear2} alt="Equipment of Migule" />
-        </Middle>
+        </Row>
+        <Row>
+          <Photo src={Computer} alt="Miguel's computer" /> 
+          <Photo src={Live_Miguel} alt="Miguel playing live" />
+          <Photo src={Three} alt="Miguel with three people" />
+          <Photo src={Pedals} alt="Pedals of Miguel" />
+        </Row>
       </Body>
     )
   }
@@ -32,19 +42,13 @@ class Photos extends React.Component {
 const Body = styled.div`
   background-color: #686868;
 `
-const Top = styled.div`
+const Row = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   padding-top: 1em;
 `
 
-const Middle = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding-top: 1em;
-`
 
 const Photo = styled.img`
   width: 25em;

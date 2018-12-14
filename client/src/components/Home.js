@@ -1,7 +1,4 @@
 import React, { Component } from 'react'
-import {
-  Image
-} from 'semantic-ui-react'
 import Band_Playing from '../Images/Band_Playing.jpg';
 import Holding_Guitar from '../Images/Holding_Guitar.jpg';
 import With_Band from '../Images/With_Band.jpg';
@@ -11,10 +8,20 @@ import LimeRush from '../Images/LimeRush.mp4'
 import styled from 'styled-components'
 
 class Home extends Component {
-  state = { i: 0 }
+  state = { 
+    i: 0,
+    photos: [
+    <Loop src={With_Band} alt="Migule with Band"/>,
+    <Loop src={Band_Playing} alt="Migule with Band"/>,
+    <Loop src={Holding_Guitar} alt="Migule on Stage"/>,
+  ]
+   }
   componentDidMount() {
     this.interval = setInterval(() => {
       this.setState({i: this.state.i + 1})
+      if(this.state.i >= this.state.photos.length){
+        this.setState({i: 0})
+      }
     }, 3000)
   }
 
@@ -22,19 +29,18 @@ class Home extends Component {
     clearInterval(this.interval)
   }
 
-  PhotoLoop = (i) => {  
-    if(i % 2 === 0) {
-      return (<Image src={Band_Playing} alt="Migule with Band"/>)
-    } else {
-      return (<Image src={Holding_Guitar} alt="Migule on Stage"/>)
-    }    
+  ArrayLoop = () => {
+    let {i, photos} = this.state
+    for(i; photos.length;){
+      return(photos[i])
+    }
+    this.setState(i = 0)
   }
 
   render() {
     return (
       <Body>
-      {/* <Header as="h1" textAlign="center">Home Component</Header> */}
-      <Par>Welcome to Meguel's Website</Par>
+      <Par>Miguel Guitarist</Par>
         <Miguel controls>
         Limelight
           <source src={LimeRush} type="video/mp4" />
@@ -55,7 +61,9 @@ class Home extends Component {
            qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum 
            fugiat quo voluptas nulla pariatur? End
         </Description>
-        {this.PhotoLoop(this.state.i)}
+        <Divid>
+         <Par>These are photos of Miguel</Par> {this.ArrayLoop()}
+        </Divid>
       <Divid>
         <Logos src={Facebook_logo} alt="facebook logo" />
         <Logos src={Youtube_logo} alt="Youtube logo" />     
@@ -71,6 +79,11 @@ const Body = styled.div`
  height: 100%;
 ` 
 
+const Loop = styled.img`
+  height: 20em;
+  width: 20em;
+`
+
 const Description = styled.section`
   display: flex;
   justify-content: center;
@@ -82,7 +95,7 @@ const Description = styled.section`
 const Divid = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   width: 100%;
   flex-wrap: wrap;
 `
