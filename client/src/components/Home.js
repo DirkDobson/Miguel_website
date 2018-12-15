@@ -41,7 +41,6 @@ class Home extends Component {
     for(i; photos.length;){
       return(photos[i])
     }
-    this.setState(i = 0)
   }
 
   render() {
