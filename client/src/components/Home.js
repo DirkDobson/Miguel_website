@@ -19,7 +19,7 @@ class Home extends Component {
       <Loop src={With_Band} alt="Migule with Band"/>,
       <Loop src={Band_Playing} alt="Migule with Band"/>,
       <Loop src={Acoustic} alt="Migule with acoustic"/>,
-      <Loop src={Pizza} alt="Migule with pizza shirt"/>
+      <Loop src={Pizza} alt="Migule with pizza shirt"/>,
   ],
    }
   componentDidMount() {
@@ -28,7 +28,7 @@ class Home extends Component {
       if(this.state.i >= this.state.photos.length){
         this.setState({i: 0})
       }
-    }, 3000)
+    }, 2000)
   }
   // Interval must be double of Animation length
 
@@ -51,24 +51,24 @@ class Home extends Component {
         Limelight
           <source src={LimeRush} type="video/mp4" />
         </Miguel>
-        <Description>
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-         totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-         dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
-         sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-          Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-          sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-           voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit 
-           laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit 
-           qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum 
-           fugiat quo voluptas nulla pariatur? End
-        </Description>
         <Divid>
-         <Par>These are photos of Miguel</Par> {this.ArrayLoop()}
+          <Description>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
+            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+            sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
+            sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+            voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit 
+            laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit 
+            qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum 
+            fugiat quo voluptas nulla pariatur? End
+          </Description>
+          {this.ArrayLoop()}
         </Divid>
       <Divid>
         <Logos src={Facebook_logo} alt="facebook logo" />
@@ -80,7 +80,7 @@ class Home extends Component {
 }
 
 const Body = styled.div`
- background-color: #686868;
+ background-color: darkred;
  padding-top: 2em;
  height: 100%;
 ` 
@@ -97,15 +97,17 @@ const pulse = keyframes`
 
 const animation = props =>
   css`
-    ${pulse} ${props.animationLength} 1.5s infinite alternate; 
+    ${pulse} ${props.animationLength} 1s infinite alternate; 
   `
 
 // Animation length must be half of set interval
 
 const Loop = styled.img`
-  height: 20em;
-  width: 20em;
+  height: 25em;
+  width: 25em;
   animation: ${animation};
+  margin-right: 15em;
+  margin-top: 3em;
 `
 
 const Title = styled.h1`
@@ -117,19 +119,18 @@ margin-top 10px;
 `
 
 const Description = styled.section`
-  display: flex;
-  justify-content: center;
-  text-align: center;
+  width: 40em;
+  text-align: left;
   font-size: 1.5em;
-  padding: 2.5em;
+  padding-top: 2em;
+  margin-left: 1em;
 `
 
 const Divid = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
-  flex-wrap: wrap;
 `
 
 const Miguel = styled.video`
@@ -138,13 +139,6 @@ const Miguel = styled.video`
   margin-right: auto;
 `
 
-const Par = styled.p`
-  color: black;
-  display: flex;
-  justify-content: center;
-  font-size: 1.2em;
-  margin-top 10px;
-`
 const Logos = styled.img`
   width: 24px;
   height: 24px;

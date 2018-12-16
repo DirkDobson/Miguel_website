@@ -12,6 +12,10 @@ import Computer from '../Images/Computer.jpg';
 import Live_Miguel from '../Images/Live_Miguel.jpg';
 import Three from '../Images/Three.jpg';
 import Pedals from '../Images/Pedals.jpg';
+import Old from '../Images/Old.jpg';
+import Red from '../Images/Red.jpg';
+import Soloing from '../Images/Soloing.jpg';
+import Studio from '../Images/Studio.jpg'
 
 class Photos extends React.Component {
   render() {
@@ -34,6 +38,12 @@ class Photos extends React.Component {
           <Photo src={Live_Miguel} alt="Miguel playing live" />
           <Photo src={Three} alt="Miguel with three people" />
           <Photo src={Pedals} alt="Pedals of Miguel" />
+        </Row>
+        <Row>
+          <Photo src={Old} alt="Miguel with Old Man" />
+          <Photo src={Red} alt="Miguel on stage" />
+          <Photo src={Soloing} alt="Miguel playing a solo" />
+          <Photo src={Studio} alt="Miguel in a Recording Studio" />
         </Row>
       </Body>
     )
