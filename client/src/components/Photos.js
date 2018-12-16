@@ -50,7 +50,7 @@ class Photos extends React.Component {
   }
 }
 const Body = styled.div`
-  background-color: #686868;
+  background-color: #8B0000;
 `
 const Row = styled.div`
   display: flex;

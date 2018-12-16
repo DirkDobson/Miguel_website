@@ -80,7 +80,7 @@ class Home extends Component {
 }
 
 const Body = styled.div`
- background-color: darkred;
+ background-color: #8B0000;
  padding-top: 2em;
  height: 100%;
 ` 
@@ -108,6 +108,14 @@ const Loop = styled.img`
   animation: ${animation};
   margin-right: 15em;
   margin-top: 3em;
+  @media only screen and (max-width: 568px) {
+    width: 10em;
+    height: 10em;
+  }
+  @media only screen and (max-height: 411) {
+    height: 15em;
+    width: 15em;
+  }
 `
 
 const Title = styled.h1`
@@ -137,6 +145,14 @@ const Miguel = styled.video`
   display: block;
   margin-left: auto;
   margin-right: auto;
+
+  @media only screen and (max-width: 667px) {
+    width: 25em;
+  }
+
+  @media only screen and (max-width: 568px) {
+    width: 21em;
+  }
 `
 
 const Logos = styled.img`
