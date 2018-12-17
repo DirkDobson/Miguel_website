@@ -65,11 +65,21 @@ const Row = styled.div`
   flex-direction: row;
   justify-content: space-around;
   padding-top: 1em;
+  @media only screen and (max-width: 568px) {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
 `
 
 
 const Photo = styled.img`
   width: 25em;
   height: 25em;
+  @media only screen and (max-width: 568px) {
+    padding: .5em;
+    width: 20em;
+    height: 20em;
+  }
 `
 export default Photos
