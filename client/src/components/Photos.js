@@ -21,6 +21,7 @@ class Photos extends React.Component {
   render() {
     return (
       <Body>
+        <Download>Click to Download</Download>
         <Row>
           <Photo src={Band_Playing} alt="migule with band"/>
           <Photo src={Holding_Guitar} alt="migule with guitar" />
@@ -49,6 +50,13 @@ class Photos extends React.Component {
     )
   }
 }
+
+const Download = styled.h2`
+  display: flex;
+  justify-content: center;
+  padding-top: .1em;
+  margin-bottom: 0em;
+`
 const Body = styled.div`
   background-color: #8B0000;
 `
