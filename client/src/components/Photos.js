@@ -23,7 +23,7 @@ class Photos extends React.Component {
       <Body>
         <Download>Click to Download</Download>
         <Row>
-          <Photo src={Band_Playing} alt="migule with band"/>
+          <Photo src={Band_Playing} alt="migule with band" />
           <Photo src={Holding_Guitar} alt="migule with guitar" />
           <Photo src={With_Band} alt="on stage migule" />
           <Photo src={Gear} alt="Equipment of Migule" />
