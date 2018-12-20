@@ -106,7 +106,7 @@ const Loop = styled.img`
   height: 25em;
   width: 25em;
   animation: ${animation};
-  margin-right: 15em;
+  margin-right: 10em;
   margin-top: 3em;
   @media only screen and (max-width: 568px) {
     width: 10em;
