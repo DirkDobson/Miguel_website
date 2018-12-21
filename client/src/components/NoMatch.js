@@ -1,17 +1,26 @@
 import React, { Component } from 'react';
 import { Header } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 class NoMatch extends Component {
   render() {
     return (
-      <Header as="h1" textAlign="center">
-        Page Not Found
-        <Link to="/"> Home</Link>
-      </Header>
+      <>
+        <Body>
+          <Header as="h1" textAlign="center">
+            Page Not Found
+            <Link to="/"> Home</Link>
+          </Header>
+        </Body>
+      </>
     );
   }
 }
+
+const Body = styled.div`
+ background-color: darkred;
+`
 
 export default NoMatch;
 
