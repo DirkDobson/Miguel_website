@@ -19,7 +19,7 @@ class NoMatch extends Component {
 }
 
 const Body = styled.div`
- background-color: darkred;
+ background-color: #990000;
 `
 
 export default NoMatch;

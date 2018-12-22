@@ -80,7 +80,7 @@ class Home extends Component {
 }
 
 const Body = styled.div`
- background-color: #8B0000;
+ background-color: #990000;
  padding-top: 2em;
  height: 100%;
 ` 
