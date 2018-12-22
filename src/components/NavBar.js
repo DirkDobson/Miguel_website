@@ -1,62 +1,48 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
-import { connect } from 'react-redux';
-import styled from 'styled-components';
+import { 
+  Navbar,
+  Nav,
+  NavItem,
+} from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 
 class NavBar extends Component {
 
   render() {
     return (
-      <Center>
-          <Link to="/" >
-            <P>Home</P>
-          </Link>
-          <Link to="/studio_work">
-            <P>Studio Work</P>
-          </Link>
-          <Link to="/photos">
-            <P>Photos</P>
-          </Link>
-          <Link to="/videos">
-            <P>Videos</P>
-          </Link>
-          <Link to="music">
-            <P>Music</P>
-          </Link>
-          <Link to="demos">
-            <P>Demos</P>
-          </Link>
-          <Link to="/downloads">
-            <P>Downloads</P>
-          </Link>
-          <Link to="contact">
-            <P>Contact</P>
-          </Link>
-      </Center>
+      <Navbar inverse collapseOnSelect fluid >
+        <Navbar.Header>
+          <Navbar.Brand>
+            <NavLink to="/">
+            Home
+            </NavLink>
+         </Navbar.Brand>
+         <Navbar.Toggle />
+        </Navbar.Header>
+        <Navbar.Collapse>
+          <Nav>
+          <NavItem>
+            <NavLink eventKey={1} to="/studio_work">
+              Studio Work
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink eventKey={2} to="/photos">
+              Photos
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink pullRight eventKey={3} to="/music">
+              Music
+            </NavLink>
+          </NavItem>
+          </Nav> 
+        <Navbar.Text pullRight>Miguel</Navbar.Text>     
+        </Navbar.Collapse>  
+      </Navbar>
     );
   }
 }
 
-const Center = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  background-color: blue;
-  Height: 2.5em;
-`
-const P = styled.p`
-font-size: 2em;
-color: white;
-padding-left 1em;
-padding-right 1em;
-`
-
-
-
-
-const mapStateToProps = state => {
-  return { user: state.user };
-};
-
-export default withRouter(connect(mapStateToProps)(NavBar));
+export default NavBar;
 
