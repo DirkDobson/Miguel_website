@@ -1,16 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { 
   Navbar,
   Nav,
   NavItem,
+  NavDropdown,
+  MenuItem
 } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
-class NavBar extends Component {
-
+class NavBar extends React.Component {
   render() {
     return (
-      <Navbar inverse collapseOnSelect fluid >
+      <Navbar inverse collapseOnSelect fluid style={{marginBottom: '0px'}}>
         <Navbar.Header>
           <Navbar.Brand>
             <NavLink to="/">
@@ -22,24 +23,32 @@ class NavBar extends Component {
         <Navbar.Collapse>
           <Nav>
           <NavItem>
-            <NavLink eventKey={1} to="/studio_work">
-              Studio Work
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink eventKey={2} to="/photos">
+            <NavLink eventKey={1} to="/photos">
               Photos
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink pullRight eventKey={3} to="/music">
+            <NavLink eventKey={2} to="/music">
               Music
             </NavLink>
           </NavItem>
+          <NavItem>
+            <NavLink pullRight eventKey={3} to="/studio_work">
+              Studio Work
+            </NavLink>
+          </NavItem>
           </Nav> 
-        <Navbar.Text pullRight>Miguel</Navbar.Text>     
-        </Navbar.Collapse>  
-      </Navbar>
+          <Nav pullRight>
+            <NavDropdown  pullright eventKey={3} title="Dropdown" id="basic-nav-dropdown">
+              <MenuItem eventKey={3.1}>Downloads</MenuItem>
+              <MenuItem eventKey={3.2}>Another action</MenuItem>
+              <MenuItem eventKey={3.3}>Something else here</MenuItem>
+              <MenuItem divider />
+              <MenuItem eventKey={3.4}>Separated link</MenuItem> 
+            </NavDropdown>
+          </Nav>  
+          </Navbar.Collapse>  
+        </Navbar>
     );
   }
 }

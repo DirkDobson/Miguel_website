@@ -4,29 +4,25 @@ import NoMatch from './NoMatch';
 import NavBar from './NavBar';
 import Login from './Login';
 import Register from './Register';
-import Flash from './Flash';
 import Home from './Home';
 import Photos from './Photos'
-import ProtectedRoute from './ProtectedRoute';
-import AuthRoute from './AuthRoute';
-import FetchUser from './FetchUser';
+import {BrowserRouter as Router } from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <NavBar /> 
-        <Flash />
-        <FetchUser>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <AuthRoute exact path="/login" component={Login} />
-            <AuthRoute exact path="/register" component={Register} />
-            <AuthRoute exact path="/photos" component={Photos} />
-            <Route component={NoMatch} />
-          </Switch>
-        </FetchUser>
-      </div>
+      <Router>
+        <>
+          <NavBar /> 
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/register" component={Register} />
+              <Route exact path="/photos" component={Photos} />
+              <Route component={NoMatch} />
+            </Switch>
+        </>
+      </Router>
     );
   }
 }
