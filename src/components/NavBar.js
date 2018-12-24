@@ -41,10 +41,10 @@ class NavBar extends React.Component {
           <Nav pullRight>
             <NavDropdown  pullright eventKey={3} title="Dropdown" id="basic-nav-dropdown">
               <MenuItem eventKey={3.1}>Downloads</MenuItem>
-              <MenuItem eventKey={3.2}>Another action</MenuItem>
-              <MenuItem eventKey={3.3}>Something else here</MenuItem>
+              <MenuItem eventKey={3.2}>What Ever</MenuItem>
+              <MenuItem eventKey={3.3}>Other Page</MenuItem>
               <MenuItem divider />
-              <MenuItem eventKey={3.4}>Separated link</MenuItem> 
+              <MenuItem eventKey={3.4}>Lessions</MenuItem> 
             </NavDropdown>
           </Nav>  
           </Navbar.Collapse>  
