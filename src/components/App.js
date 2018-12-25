@@ -7,12 +7,14 @@ import Register from './Register';
 import Home from './Home';
 import Photos from './Photos'
 import {BrowserRouter as Router } from 'react-router-dom';
+import styled from 'styled-components';
 
 class App extends Component {
   render() {
     return (
       <Router>
         <>
+          <Body>
           <NavBar /> 
             <Switch>
               <Route exact path="/" component={Home} />
@@ -21,11 +23,16 @@ class App extends Component {
               <Route exact path="/photos" component={Photos} />
               <Route component={NoMatch} />
             </Switch>
+            </Body>
         </>
       </Router>
     );
   }
 }
+
+const Body = styled.div`
+  background-color: #990000;
+`
 
 export default App;
 

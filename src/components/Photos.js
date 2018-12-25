@@ -20,7 +20,7 @@ import Studio from '../Images/Studio.jpg'
 class Photos extends React.Component {
   render() {
     return (
-      <Body>
+      <>
         <Download>Click to Download</Download>
         <Row>
           <Photo src={Band_Playing} alt="migule with band" />
@@ -46,7 +46,7 @@ class Photos extends React.Component {
           <Photo src={Soloing} alt="Miguel playing a solo" />
           <Photo src={Studio} alt="Miguel in a Recording Studio" />
         </Row>
-      </Body>
+      </>
     )
   }
 }
@@ -57,9 +57,7 @@ const Download = styled.h2`
   padding-top: .1em;
   margin-bottom: 0em;
 `
-const Body = styled.div`
-  background-color: #8B0000;
-`
+
 const Row = styled.div`
   display: flex;
   flex-direction: row;

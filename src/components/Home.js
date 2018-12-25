@@ -45,7 +45,7 @@ class Home extends Component {
 
   render() {
     return (
-      <Body>
+      <>
       <Title>Miguel Guitarist</Title>
         <Miguel controls>
         Limelight
@@ -74,17 +74,10 @@ class Home extends Component {
         <Logos src={Facebook_logo} alt="facebook logo" />
         <Logos src={Youtube_logo} alt="Youtube logo" />     
       </Divid>
-      </Body>
+      </>
     );
   }
 }
-
-const Body = styled.div`
- background-color: #990000;
- padding-top: 2em;
- height: 100%;
-` 
-
 
 const pulse = keyframes`
   0% {
