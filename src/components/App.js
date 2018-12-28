@@ -6,6 +6,7 @@ import Login from './Login';
 import Register from './Register';
 import Home from './Home';
 import Photos from './Photos'
+import Videos from './Videos';
 import {BrowserRouter as Router } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -21,6 +22,7 @@ class App extends Component {
               <Route exact path="/login" component={Login} />
               <Route exact path="/register" component={Register} />
               <Route exact path="/photos" component={Photos} />
+              <Route exact path="/vidoes" compoent={Videos} />
               <Route component={NoMatch} />
             </Switch>
             </Body>

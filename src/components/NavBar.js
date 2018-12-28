@@ -28,8 +28,8 @@ class NavBar extends React.Component {
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink eventKey={2} to="/music">
-              Music
+            <NavLink eventKey={2} to="/vidoes">
+              Videos
             </NavLink>
           </NavItem>
           <NavItem>
@@ -44,7 +44,7 @@ class NavBar extends React.Component {
               <MenuItem eventKey={3.2}>What Ever</MenuItem>
               <MenuItem eventKey={3.3}>Other Page</MenuItem>
               <MenuItem divider />
-              <MenuItem eventKey={3.4}>Lessions</MenuItem> 
+              <MenuItem eventKey={3.4}>Lessons</MenuItem> 
             </NavDropdown>
           </Nav>  
           </Navbar.Collapse>  
