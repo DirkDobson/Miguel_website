@@ -28,7 +28,7 @@ class NavBar extends React.Component {
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink eventKey={2} to="/vidoes">
+            <NavLink eventKey={2} to="/videos">
               Videos
             </NavLink>
           </NavItem>
