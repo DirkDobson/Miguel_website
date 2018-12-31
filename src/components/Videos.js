@@ -6,6 +6,12 @@ class Videos extends React.Component {
     return(
       <>
       <Download>Click to Download</Download>
+      <Row>
+
+      </Row>
+      <Row>
+        
+      </Row>
       </>
     )
   }
@@ -16,6 +22,18 @@ const Download = styled.h2`
   justify-content: center;
   padding-top: .1em;
   margin-bottom: 0em;
+`
+
+const Row = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 1em;
+  @media only screen and (max-width: 568px) {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
 `
 
 export default Videos
