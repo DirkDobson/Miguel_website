@@ -1,4 +1,5 @@
 import React from 'react';
+import LimeRush from '../Images/LimeRush.mp4'
 import styled from 'styled-components';
 
 class Videos extends React.Component {
@@ -7,7 +8,7 @@ class Videos extends React.Component {
       <>
       <Download>Click to Download</Download>
       <Row>
-
+        <LimeRush/>
       </Row>
       <Row>
         
