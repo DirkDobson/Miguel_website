@@ -7,7 +7,7 @@ class NoMatch extends Component {
     return (
       <>
         <Header as="h1" textAlign="center">
-          Page Not Found
+          You Are Lost
           <Link to="/"> Home</Link>
         </Header>
       </>
